@@ -1,0 +1,228 @@
+:root {
+  /* Primary colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* Neutral colors */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --de-saturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  color: var(--de-saturated-blue);
+}
+
+button {
+  font-family: inherit;
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  color: var(--dark-blue);
+  font-weight: bolder;
+}
+
+/*Hyperlinks*/
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Container */
+.container {
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.bg-img {
+  background: url(../images/pattern-background-desktop.svg) no-repeat
+    center/cover;
+  height: 437px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* Card */
+.card {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  height: 220px;
+}
+
+.hero {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card-text {
+  width: 450px;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-text .text {
+  padding: 15px 45px 30px;
+}
+
+/* Plan */
+.annual-plan {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px auto;
+  margin-top: 0;
+  background-color: var(--very-pale-blue);
+  border-radius: 5px;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.inner-plan {
+  display: flex;
+  line-height: 1.5;
+  flex-direction: column;
+}
+
+.annual-plan a {
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  color: var(--bright-blue);
+}
+
+.annual-plan a:hover {
+  color: var(--de-saturated-blue);
+  text-decoration: none;
+}
+
+/*Button*/
+.payment button {
+  border-radius: 10px;
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  font-size: 1em;
+  width: 78%;
+  padding: 15px 0;
+  border: none;
+  color: #fff;
+  box-shadow: 5px 5px 8px 6px rgba(121, 121, 121, 0.637);
+  background-color: var(--bright-blue);
+}
+
+.payment button:hover {
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--de-saturated-blue);
+}
+
+/*Cancel button*/
+.cancel {
+  margin: 20px 0 30px;
+}
+
+.cancel a {
+  color: var(--de-saturated-blue);
+}
+
+.cancel a:hover {
+  color: var(--dark-blue);
+}
+
+/* Default Styling */
+.attribution {
+  padding-top: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*Mobile view*/
+@media screen and (max-width: 350px) {
+  .bg-img {
+    background: url(../images/pattern-background-mobile.svg) no-repeat
+      center/cover;
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .card-img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: small;
+    line-height: 1.2;
+  }
+
+  .hero {
+    width: 90%;
+    height: 77%;
+  }
+
+  .card-text {
+    width: 90%;
+    text-align: center;
+  }
+
+  .inner-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+  }
+
+  .attribution {
+    font-size: 12px;
+  }
+}
