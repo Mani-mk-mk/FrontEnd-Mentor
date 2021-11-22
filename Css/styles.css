@@ -205,8 +205,12 @@ a {
     line-height: 1.2;
   }
 
-  .hero {
+  .card-img {
     width: 90%;
+  }
+
+  .hero {
+    width: 100%;
     height: 77%;
   }
 
